@@ -1,0 +1,494 @@
+header{
+	background-image: url(../img/gray.jpg);
+}
+header nav{
+	background-image: url(../img/gray.jpg);
+	float: left;
+	height: 50px;
+	width: 100%;
+	z-index: 10000;
+}
+
+header nav ul{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	margin-left: 170px;
+	width: auto;
+}
+
+header nav ul li{
+	background: gray;
+	border: 1px solid gray;
+	border-radius: 10px;
+	color: white;
+	cursor: pointer;
+	font-family: 'diavlo';
+	font-weight: 300;
+	font-size: 19px;
+	height: 100%;
+	float: left;
+	margin-left: 2px;, 
+	text-align: center;
+	padding: 6px 0 0 13px;
+	width: 220px;
+	z-index: 3003;
+}
+
+header nav ul li:hover, header nav ul li.current{
+	background: black;
+}
+
+header nav ul li i{
+	padding: 3px 5px 0 0;
+}
+
+
+
+section{
+	background-image: url(../img/gray.jpg);
+	float: left;
+}
+
+
+aside{
+	display: none;	
+}
+
+
+
+/*------------------------------------------------------------------------------------------
+		FORMULARIO PARA CREAR UNA NUEVA PROMOCION
+--------------------------------------------------------------------------------------------
+		Este es el formulario que contiene el frontend para crear una nueva promoción
+--------------------------------------------------------------------------------------------
+*/	
+header .logout{
+	background-color: black;
+	border-radius: 10px;
+	color: white;
+	display: block;
+	padding: 10px 15px;
+	right: 0;
+	top: 0;
+	text-decoration: none;
+	position: absolute;
+}
+
+header .logout:hover{
+	background: white;
+	color: black;
+}
+
+#all-promo{
+	border-right: 2px dashed #c6c6c6;
+}
+
+#new-form{
+	height: 100%;
+	color: #2e2e2e;
+	width: 310px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#new-form h3{
+	display: block;
+	float: left;
+	margin: 15px 0 -7px 0;
+}
+
+#new-form .info{
+	height: 50px;
+	display: block;
+	margin-top: 15px;
+	font-family: 'LatoHairline' !important;
+	font-style: italic;
+	float: left;	
+}
+
+#new-form .info.all{
+	width: 300px;
+}
+
+#new-form .info.all input{
+	font-family: 'LatoHairline' !important;
+	font-style: italic;
+}
+
+#new-form .info.mid{
+	font-family: 'LatoHairline' !important;
+	font-style: italic;
+	width: 140px;
+	margin-right: 10px;
+}
+
+#new-form .info.mid input, #new-form .info.mid select{
+	font-family: 'LatoHairline' !important;
+	font-style: italic;
+	width: 140px;
+}
+
+#new-form .info input{
+	height: 30px;
+	width: 290px;
+}
+
+#new-form .info select{
+	font-family: 'LatoHairline' !important;
+	font-style: italic;
+	height: 30px;
+	width: 290px;	
+}
+
+#new-form .info .btn{
+	font-size: 14px;
+	float: left;
+	margin-left: 4px;
+	height: 40px;
+	margin-top: 15px;
+	width: 95px;
+}
+
+#anoun{
+	background: rgba(255,255,132,0.5);
+	border-radius: 15px;
+	color: #1e1e1e;
+	display: none;
+	margin-top: 10px;
+	padding: 4px 0;
+	text-align: center;
+	width: 100%;
+}
+.bg-green{ color: #b2ffd2; }
+.bg-blue{ color: #bfdeff; }
+.bg-orange{	color: #fbfcbd; }
+
+
+/*------------------------------------------------------------------------------------------
+		LISTA DE PROMOCIONES
+--------------------------------------------------------------------------------------------
+		Esta esla lista de promociones tanto las que se crearon todo el tiempo como las 
+		que son actuales.
+--------------------------------------------------------------------------------------------
+*/
+
+#all-promo, #currents-promo{
+	overflow: auto;
+}
+
+.list-items{
+	height: 100%;
+	float: left;
+	width: 50%;
+}
+
+.list-items h3{
+	background-color: white;
+	border-radius: 8px;
+	color: #2e2e2e;
+	display: block;
+	float: left;
+	font-family: 'LatoHairline' !important;
+	font-size: 15px;
+	margin: 10px;
+	padding: 5px 30px;
+	text-align: center;
+	text-transform: uppercase;
+	width: auto;
+}
+
+
+.list-items .item{
+	border-bottom: 2px dashed #c6c6c6;
+	display: block;
+	float: left;
+	height: 90px;
+	padding-left: 20px;
+	position: relative;
+	width: 100%;
+}
+
+.list-items .item:hover{
+	cursor: pointer;
+	background: #ffffc4;
+}
+
+.list-items .item:first-child{
+	border-top: 1px dotted gray;
+}
+
+.list-items .item img{
+	display: block;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	height: 70px;
+	width: 70px;
+}
+
+.list-items .item .contex{
+	color: #6d6d6d;
+	display: block;
+	float: left;
+	height: 100%;
+	position: relative;
+	width: 280px;
+}
+
+.list-items .item .contex .id:before{
+	content: 'ID : ';
+	font-weight: 800;
+}
+
+.list-items .item .contex .id{
+	background-color: #2d89ef;
+	border-radius: 5px;
+	bottom: 10px;
+	color: white;
+	display: block;
+	font-size: 14px;
+	padding: 3px 5px;
+	position: absolute;
+	right: 80px;
+	text-align: center;
+}
+.list-items .item .contex .ruta{
+	display: block;
+	font-weight: 800;
+	font-size: 18px;
+	text-align: left;
+	padding: 5px  0  0 15px;
+}
+
+.list-items .item .contex .date,
+.list-items .item .contex .description
+{
+	display: block;
+	line-height: 15px;
+	/*float: left;*/
+	font-size: 15px;
+	padding-left: 20px;
+	width: 100%;
+}
+
+.list-items .item .contex .date{
+	color: #3e3e3e;
+}
+.list-items .item .contex .description{
+	font-size: 12px;
+	width: 80%;
+}
+.list-items .item .contex .desc{
+	background-color: #19385b;
+	border-radius: 10px;
+	color: white;
+	display: block;
+	float: right;
+	font-size: 16px;
+	font-weight: 800;
+	padding: 5px 10px  7px 10px;
+	position: absolute;
+	right: 30px;
+	bottom: 10px;
+}
+
+
+/*------------------------------------------------------------------------------------------
+		LISTA DE FANS DE LA PROMOCIONES
+--------------------------------------------------------------------------------------------
+		Esta esla lista de fans de las promociones tanto los que stan en espera de ser atendidos como los beneficiarios
+--------------------------------------------------------------------------------------------
+*/
+
+#promo{
+	height: 140px;
+	width: 100%;
+	border-bottom: 2px dashed gray;
+}
+#promo h3{
+	color: gray;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	padding-left: 20px;
+}
+
+#promo img{
+	float: left;
+	height: 60px;
+	margin: 10px;
+	width: 60px;
+}
+
+#promo .contex{
+	float: left;	
+	height: 90px;
+	position: relative;
+	width: 708px;
+}
+
+#promo .contex span{
+	display: block;
+}
+
+#promo .contex .hour{
+	background-color: #fff9c4;
+	bottom: 17px;
+	border-radius: 8px;
+	float: right;
+	padding: 5px 8px;
+	position: absolute;
+	right: 70px;
+}
+
+#promo .contex .hour:before{
+	font-weight: 800;
+	content: 'Hrs. ';
+}
+
+#promo .contex .price{
+	background-color: #ffe7e5;
+	border-radius: 8px;
+	padding: 7px 10px;
+	position: absolute;
+	bottom: 0px;
+	right: 325px;
+}
+
+#promo .contex .id{
+	background-color: #d44132;
+	border-radius: 8px;
+	color: white;	
+	position: absolute;
+	padding: 5px 14px;
+	left: 20px;
+	bottom: -2px;
+}
+
+#promo .contex .id:before{
+	content: "ID : ";
+	font-weight: 800;	
+}
+
+#promo .contex .price:before{
+	content: 'Precio : ';
+	font-weight: 800;
+}
+
+#promo .contex .price:after{
+	content: ' Bs.';
+	font-weight: 800;
+}
+
+#promo .contex .ruta{
+	font-weight: 800;
+	font-size: 20px;
+	display: block;
+	float: left;
+	padding: 5px 15px;
+
+}
+#promo .contex .date{
+	background-color: #c9f1ff;
+	border-radius: 8px;
+	color: #3e3e3e;
+	display: block;
+	float: right;
+	font-family: 'diavlo';
+	font-size: 16px;
+	padding: 7px 15px;
+	margin-right: 0px;
+}
+#promo .contex .description{
+	display: block;
+	float: left;
+	font-size: 13px;
+	padding: 0 20px;
+	width: 708px;
+}
+#promo .contex .desc{
+	background-color: #19385b;
+	border-radius: 10px;
+	bottom: -5px;
+	color: white;
+	font-size: 24px;
+	font-weight: 800;
+	display: block;
+	position: absolute;
+	padding: 12px 18px;
+	right: 0px;
+}
+
+#cola{
+	border-right: 2px dashed gray; 
+}
+
+#cola, #beneficiados{
+	overflow: auto;
+}
+.list-items .fan{
+	position: relative;
+}
+
+.list-items .fan .iconik{
+	color: #3e3e3e;
+	float: left;
+	font-size: 50px;
+}
+
+.list-items .fan .id{
+	display: none;
+}
+
+.list-items .fan span{
+	display: block;
+	float: left;
+}
+
+.list-items .fan .name{
+	color: gray;
+	font-weight: 800;
+	font-size: 16px;
+	padding: 5px 0 0 10px;
+	width: 300px;
+}
+.list-items .fan .ci,
+.list-items .fan .phone
+{
+	color: gray;	
+	font-size: 13px;
+	padding-left: 10px;
+	width: 280px;
+}
+
+.list-items .fan .ci i{
+	color: #788ba5;
+	padding-right: 5px;	
+	/*text-shadow: 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000;*/
+}
+.list-items .fan .phone i{
+	color: #7eb57e;
+}
+
+.list-items .fan .mail{
+	position: absolute;
+	right: 25px;
+	bottom: 10px;
+}
+.list-items .fan .mail i{
+	color: #c6c4c4;
+	display: block;
+	float: left;
+	font-size: 33px;
+}
+
+.list-items .fan .mail .cheking{
+	margin-top: 7px;
+	margin-left: 3px;
+	font-size: 25px;
+}
+
+.list-items .fan .mail .cheking:hover, .list-items .fan .mail .mailer:hover{
+	color: black;
+}
